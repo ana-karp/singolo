@@ -28,6 +28,47 @@
     margin: auto;
 }
 header {
-    height: 90px;
+    height: 89px;
+    padding: auto 40px;
     background-color: #2D303A;
+    display: flex;
+    border-bottom: 6px solid #323746;
+}
+
+.logo h1{
+    margin-left: 40px;
+    padding-top: 30px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    font-size: 25px;
+}
+
+.logo h1 span{
+    color: #f06c64;
+}
+
+.navbar {
+    margin-left: 397px;
+    padding: 0;
+    letter-spacing: -0.01em;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    list-style-position: inside;
+}
+
+.navbar ul li {
+  padding-top: 38px;
+  padding-right: 15px;
+  padding-left: 15px;
+  
+  text-decoration: none;
+}
+
+.navbar ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 12px;
 }
