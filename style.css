@@ -61,6 +61,7 @@ header {
 .navbar ul li a {
     color: #FFFFFF;
     text-decoration: none;
+    font-family: "Lato Bold", sans-serif;
     font-size: 12px;
     padding: 42px 0px 30px 13px;
     display: inline-block;
@@ -74,4 +75,32 @@ header {
 
 .navbar ul li a:hover {
   color: #f06c64;
+}
+
+.slider {
+    height: 600px;
+    display: grid;
+    position: relative;
+    grid-template-columns: 96px 1fr 96px;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+    box-sizing: border-box;
+}
+
+.slider button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+.phone-vertical {
+      position: absolute;
+      top: 52px;
+      left: 110px;
+  }
+
+.phone-horizontal {
+    position: absolute;
+      top: 174px;
+      right: 110px;
 }
