@@ -29,14 +29,15 @@
     margin: auto;
 }
 header {
+    padding: 0 40px;
     height: 89px;
     background-color: #2D303A;
     display: flex;
+    justify-content: space-between;
     border-bottom: 6px solid #323746;
 }
 
 .logo h1{
-    margin-left: 40px;
     padding-top: 30px;
     letter-spacing: -0.02em;
     color: #FFFFFF;
@@ -48,7 +49,6 @@ header {
 }
 
 .navbar {
-    margin-left: 399px;
     letter-spacing: -0.01em;
 }
 
@@ -56,7 +56,6 @@ header {
     display: flex;
     list-style: none;
 }
-
 
 .navbar ul li a {
     color: #FFFFFF;
@@ -70,7 +69,6 @@ header {
 .navbar ul li a span {
     color: #494e62;
     padding-left: 14px;
-
 }
 
 .navbar ul li a:hover {
@@ -80,8 +78,8 @@ header {
 .slider {
     height: 600px;
     display: grid;
-    position: relative;
     grid-template-columns: 96px 1fr 96px;
+    overflow: hidden;
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
     box-sizing: border-box;
@@ -91,16 +89,71 @@ header {
     border: none;
     background: transparent;
     cursor: pointer;
-  }
+    outline: none;
+}
 
-.phone-vertical {
-      position: absolute;
-      top: 52px;
-      left: 110px;
-  }
+.slider button:hover {
+    background-color:  #eb5a5e;
+}
+
+.phone-vertical { 
+    padding-top: 52px;
+    padding-left: 14px;
+}
 
 .phone-horizontal {
-    position: absolute;
-      top: 174px;
-      right: 110px;
+    padding-left: 69px;
+    padding-bottom: 122px;
+}
+
+.services {
+    padding: 59px 40px 65px;
+    color: #666d89;
+    background-color: #f2f2f2;
+}
+
+.head-services h2 {
+    font-size: 30px;
+    font-family: "Lato Black", sans-serif;
+    padding-bottom: 18px;
+}
+
+.head-services p {
+    font-size: 18px;
+    font-family: "Lato Light", sans-serif;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.container {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.services-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-column-gap: 20px;
+}
+
+.item-description h3 {
+    font-size: 18px;
+    font-family: "Lato Bold", sans-serif;
+    text-transform: capitalize;
+    padding-bottom: 8px;
+}
+
+.item-description p {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -.002em;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.service-icon {
+    padding-top: 2px;
 }
