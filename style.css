@@ -34,6 +34,7 @@ header {
     background-color: #2D303A;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
     border-bottom: 6px solid #323746;
 }
 
@@ -84,6 +85,7 @@ header {
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
     box-sizing: border-box;
+    position: relative;
 }
 
 .slider button {
@@ -97,14 +99,16 @@ header {
     background-color:  #eb5a5e;
 }
 
-.phone-vertical { 
-    padding-top: 52px;
-    padding-left: 14px;
+.phone-vertical {
+    position: absolute; 
+    top: 52px;
+    left: 110px;
 }
 
 .phone-horizontal {
-    padding-left: 69px;
-    padding-bottom: 122px;
+    position: absolute;
+    top: 173px;
+    left: 425px;
 }
 
 .services {
@@ -132,6 +136,7 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
     grid-row-gap: 30px;
+    overflow: hidden;
 }
 
 .services-item {
