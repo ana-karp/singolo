@@ -74,7 +74,7 @@ header {
 }
 
 .navbar ul li a:hover {
-  color: #f06c64;
+    color: #f06c64;
 }
 
 .slider {
@@ -157,7 +157,6 @@ header {
     line-height: 22px;
     letter-spacing: -.002em;
     text-align: justify;
-    hyphens: auto;
 }
 
 .service-icon {
