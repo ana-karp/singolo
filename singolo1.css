@@ -68,6 +68,10 @@ header {
     display: inline-block;
 }
 
+.navbar ul li a.home {
+    color: #f06c64;
+}
+
 .navbar ul li a span {
     color: #494e62;
     padding-left: 14px;
