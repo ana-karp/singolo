@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Lato Regular";
+    src: url("assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  }
+  
+@font-face {
+    font-family: "Lato Light";
+    src: url("assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+}
+  
+@font-face {
+    font-family: "Lato Bold";
+    src: url("assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+  
+@font-face {
+    font-family: "Lato Black";
+    src: url("assets/fonts/Lato/Lato-Black.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    font-family: "Lato Regular", sans-serif;
+    font-weight: normal;
+}
+
+.portfolio {
+    max-width: 1020px;
+    margin: auto;
+    padding: 61px 40px 66px;
+    box-sizing: border-box;
+    background-color: #2d303a;
+    color: #666d89;
+    border-bottom: solid 6px #323746;;
+}
+
+.portfolio-header h2 {
+    font-size: 30px;
+    font-family: "Lato Black", sans-serif;
+    padding-bottom: 18px;
+}
+
+.portfolio-header p {
+    font-size: 18px;
+    font-family: "Lato Light", sans-serif;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.filter {
+    display: flex;
+    margin: 11px 1px 20px;
+}
+
+.filter-item {
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #767e9e;
+    border: 1px solid #767e9e;
+    border-radius: 4px;  
+    margin-right: 10px;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+.active, .filter-item:hover {
+    color: #dedede;;
+    border: 1px solid #c5c5c5;
+    transition: .3s;
+}
+
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    max-height: 601px;
+    overflow: hidden;   
+}
+
+.projects-container div {
+    height: 187px;
+    overflow: hidden;
+}
