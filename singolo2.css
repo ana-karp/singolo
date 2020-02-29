@@ -31,16 +31,16 @@
     box-sizing: border-box;
     background-color: #2d303a;
     color: #666d89;
-    border-bottom: solid 6px #323746;;
+    border-bottom: solid 6px #323746;
 }
 
-.portfolio-header h2 {
+.portfolio-header h2, .about-us-header h2 {
     font-size: 30px;
     font-family: "Lato Black", sans-serif;
     padding-bottom: 18px;
 }
 
-.portfolio-header p {
+.portfolio-header p, .about-us-header p {
     font-size: 18px;
     font-family: "Lato Light", sans-serif;
     text-align: justify;
@@ -85,3 +85,54 @@
     overflow: hidden;
 }
 
+.about-us {
+    max-width: 1020px;
+    margin: auto;
+    padding: 61px 40px 66px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;;
+    color: #666d89;
+    border-bottom: solid 6px #ffffff;
+}
+
+.profiles-container {
+    margin-top: 46px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;  
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+}
+
+.profile h3 {
+    font-size: 18px;
+    font-family: "Lato Bold", sans-serif;
+    padding-top: 11px;
+    letter-spacing: -.02;
+}
+
+.profile p {
+    padding-top: 9px;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 21px;
+}
+
+.social-icons img {
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    filter: brightness(20%);
+    transition: .3s;
+}
