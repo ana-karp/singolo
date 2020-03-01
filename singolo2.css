@@ -70,7 +70,6 @@
     transition: .3s;
 }
 
-
 .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -103,12 +102,17 @@
     align-items: center;  
 }
 
+.profile{
+    overflow: hidden;
+}
+
 .profile-image {
     width: 300px;
     height: 300px;
 }
 
 .profile h3 {
+    white-space: nowrap;
     font-size: 18px;
     font-family: "Lato Bold", sans-serif;
     padding-top: 11px;
