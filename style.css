@@ -20,6 +20,7 @@
 
 * {
     margin: 0;
+    padding: 0;
     font-family: "Lato Regular", sans-serif;
     font-weight: normal;
 }
@@ -119,9 +120,12 @@ header {
 }
 
 .services {
-    padding: 59px 40px 65px;
+    box-sizing: border-box;
+    height: 501px;
+    padding: 59px 40px 0px;
     color: #666d89;
     background-color: #f2f2f2;
+    border-bottom: 6px #ffffff;
 }
 
 .head-services h2 {
@@ -142,7 +146,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
-    grid-row-gap: 30px;
+    grid-row-gap: 28px;
     overflow: hidden;
 }
 
@@ -160,6 +164,7 @@ header {
 }
 
 .item-description p {
+    padding: 0;
     font-size: 12px;
     line-height: 22px;
     letter-spacing: -.002em;
@@ -173,7 +178,7 @@ header {
 /* Portfolio & About Us */
 
 .portfolio {
-    padding: 61px 40px 66px;
+    padding: 60px 40px 66px;
     box-sizing: border-box;
     background-color: #2d303a;
     color: #666d89;
@@ -206,6 +211,7 @@ header {
     border: 1px solid #767e9e;
     border-radius: 4px;  
     margin-right: 10px;
+    padding: 0px 6px;
     line-height: 18px;
     font-size: 12px;
 }
@@ -231,8 +237,8 @@ header {
 }
 
 .about-us {
-    max-width: 1020px;
-    margin: auto;
+    box-sizing: border-box;
+    height: 734px;
     padding: 61px 40px 63px;
     box-sizing: border-box;
     background-color: #f2f2f2;;
@@ -241,7 +247,7 @@ header {
 }
 
 .profiles-container {
-    margin-top: 46px;
+    margin-top: 44px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
