@@ -14,42 +14,46 @@
             <h1>SINGOLO<span>*</span></h1>
         </div>
         <nav class="navbar">
-            <ul>
+            <ul id="menu">
                 <li>
-                    <a class="home" href="#">HOME<span>·</span></a>
+                    <a class="active-menu" href="#">HOME<span>·</span></a>
                 </li>
                 <li>
-                    <a href="#">SERVICES<span>·</span></a>
+                    <a href="#services">SERVICES<span>·</span></a>
                 </li>
                 <li>
-                    <a href="#">PORTFOLIO<span>·</span></a>
+                    <a href="#portfolio">PORTFOLIO<span>·</span></a>
                 </li>
                 <li>
-                    <a href="#">ABOUT<span>·</span></a>
+                    <a href="#about">ABOUT<span>·</span></a>
                 </li>
                 <li>
-                    <a href="#">CONTACT</a>
+                    <a href="#contact">CONTACT</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="slider">
-            <button class="prev"><img src="assets\images\chev_prev.svg" alt="Previous"></button>
-            <div class="slide">
-                <img class="phone-vertical" src="assets/images/iphone_vertical.png" alt="Image of smartphone">
-                <img class="phone-horizontal" src="assets/images/iphone_horizontal.png" alt="Image of smartphone">
+            <div class="slides-container">
+                <div class="slide first active">
+                    <img src="assets\images\slide1.png" alt="Slide 1">
+                    <img id="screen-left" class="screen left" src="assets\images\screen_black.png" alt="Phone">
+                    <img id="screen-right" class="screen right" src="assets\images\screen_black.png" alt="Phone">
+                </div>
+                <div class="slide">
+                    <img src="assets\images\slide2.png" alt="Slide 2">
+                </div>
             </div>
-            <button class="next"><img src="assets\images\chev_next.svg" alt=""></button>
+            <button class="control prev-button"><img src="assets\images\chev_prev.svg" alt="Previous"></button>
+            <button class="control next-button"><img src="assets\images\chev_next.svg" alt=""></button>
         </section>
+        <a name="services"></a>
         <section class="services">
             <div class="head-services">
                 <h2>Our Services</h2>
                 <p>
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-                    Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
-                    lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
-                    tortor mauris condimentum nibh.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                 </p>
             </div>
             <div class="container">
@@ -58,8 +62,7 @@
                     <div class="item-description">
                         <h3>Custom design</h3>
                         <p>
-                            Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
-                            laoreet, viverra lacus ut, ultrices velit.</p>
+                            Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                     </div>
                 </div>
                 <div class="services-item">
@@ -67,8 +70,7 @@
                     <div class="item-description">
                         <h3>Inovative ideas</h3>
                         <p>
-                            Quisque luctus, quam eget molestie commodo, lacus purus cursus
-                            purus, nec rutrum tellus dolor id lorem.</p>
+                            Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     </div>
                 </div>
                 <div class="services-item">
@@ -76,8 +78,7 @@
                     <div class="item-description">
                         <h3>Love is the answer</h3>
                         <p>
-                            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
-                            et consequat felis. Quisque condimentum.</p>
+                            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     </div>
                 </div>
                 <div class="services-item">
@@ -85,8 +86,7 @@
                     <div class="item-description">
                         <h3>Responsive layout</h3>
                         <p>
-                            Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc
-                            ligula. Praesent elit leo.</p>
+                            Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
                     </div>
                 </div>
                 <div class="services-item">
@@ -94,8 +94,7 @@
                     <div class="item-description">
                         <h3>24 / 7 support</h3>
                         <p>
-                            Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem
-                            erat. Pellentesque egestas venenatis lorem.</p>
+                            Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
                     </div>
                 </div>
                 <div class="services-item">
@@ -103,12 +102,12 @@
                     <div class="item-description">
                         <h3>Feel like a star</h3>
                         <p>
-                            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
-                            nibh. Fusce vitae aliquam tellus.</p>
+                            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
                     </div>
                 </div>
             </div>
         </section>
+        <a name="portfolio"></a>
         <section class="portfolio">
             <div class="portfolio-header">
                 <h2>Portfolio</h2>
@@ -116,13 +115,13 @@
                     Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                 </p>
             </div>
-            <div class="filter">
-                <button class="filter-item active">All</button>
+            <div class="filter" id="filter">
+                <button class="filter-item active-filter">All</button>
                 <button class="filter-item">Web Design</button>
                 <button class="filter-item">Graphic Design</button>
                 <button class="filter-item">Artwork</button>
             </div>
-            <div class="projects-container">
+            <div id="portfolio-images" class="projects-container">
                 <div><img src="assets\images\project-1.png" alt="Image of project"></div>
                 <div><img src="assets\images\project-2.png" alt="Image of project"></div>
                 <div><img src="assets\images\project-3.png" alt="Image of project"></div>
@@ -137,13 +136,12 @@
                 <div><img src="assets\images\project-12.png" alt="Image of project"></div>
             </div>
         </section>
+        <a name="about"></a>
         <section class="about-us">
             <div class="about-us-header">
                 <h2>About Us</h2>
                 <p>
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo
-                    luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
-                    cursus commodo, tortor mauris condimentum nibh.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                 </p>
             </div>
             <div class="profiles-container">
@@ -151,8 +149,7 @@
                     <img class="profile-image" src="assets\images\photo-1.png" alt="Photo of Adam Jensen">
                     <h3>Adam Jensen</h3>
                     <p>
-                        Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus
-                        dolor id lorem.
+                        Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
                     </p>
                     <div class="social-icons">
                         <a href="#"><img src="assets\images\fb_icon.svg" alt="Facebook icon"></a>
@@ -165,8 +162,7 @@
                     <img class="profile-image" src="assets\images\photo-2.png" alt="Photo of Desmond Miles">
                     <h3>Desmond Miles</h3>
                     <p>
-                        Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra
-                        lacus ut, ultrices velit.
+                        Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
                     </p>
                     <div class="social-icons">
                         <a href="#"><img src="assets\images\fb_icon.svg" alt="Facebook icon"></a>
@@ -179,8 +175,7 @@
                     <img class="profile-image" src="assets\images\photo-3.png" alt="Photo of Scolara Visari">
                     <h3>Scolara Visari</h3>
                     <p>
-                        Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
-                        Quisque condimentum.
+                        Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
                     </p>
                     <div class="social-icons">
                         <a href="#"><img src="assets\images\fb_icon.svg" alt="Facebook icon"></a>
@@ -191,38 +186,48 @@
                 </div>
             </div>
         </section>
+        <a name="contact"></a>
         <section class="contact">
             <div class="contact-header">
                 <h2>Get a Quote</h2>
                 <p>
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, 
-                    non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                 </p>
             </div>
             <div class="contact-form">
-                <form action="" class="form" method="post">
+                <form id="form" action="" class="form" method="post">
                     <input id="name" type="text" name="name" placeholder="Name (Required)" required>
                     <input id="email" type="email" name="email" placeholder="Email (Required)" required>
                     <input id="subject" type="text" name="subject" placeholder="Subject">
-                    <textarea id="description" type="text" name="description"  placeholder="Describe your project in detail..."></textarea>
-                    <button class="submit-button" type="submit">Submit</button>
+                    <textarea id="description" type="text" name="description" placeholder="Describe your project in detail..."></textarea>
+                    <button id="submit-button" class="submit-button" type="submit">Submit</button>
                 </form>
+
                 <div class="info">
                     <h3>Contact Information</h3>
-                    <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae 
-                        aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. 
-                        Morbi at aliquet turpis, et consequat felis.
+                    <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
                     </p>
                     <div class="contacts">
-                        <p><img src="assets\images\location_icon.svg" alt="icon" height="15px">Elm St. 14/05 Lost City </p>
-                        <p>
-                            <img src="assets\images\phone_icon.svg" alt="icon" height="15px"><a href="tel:035283318635"> 03528 331 86 35</a>
+                        <p><img src="assets\images\location_icon.svg" alt="icon" height="15px">Elm St. 14/05 Lost City
                         </p>
                         <p>
-                            <img src="assets\images\mail_icon.svg" alt="icon"  width="14px"> <a href="mailto:info@singolo.com">info@singolo.com</a>
+                            <img src="assets\images\phone_icon.svg" alt="icon" height="15px"><a href="tel:035283318635">
+                                03528 331 86 35</a>
                         </p>
-                    </div>                    
+                        <p>
+                            <img src="assets\images\mail_icon.svg" alt="icon" width="14px"> <a href="mailto:info@singolo.com">info@singolo.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="message-block" class="hidden">
+                <div id="message">
+                    <h3>Письмо отправлено</h3>
+                    <p id="message-subject"></p>
+                    <p id="message-dsc"></p>
+                    <div class="button-wrapper">
+                        <button class="close-button" id="close-button">OK</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -238,5 +243,7 @@
             <a href="#"><img src="assets\images\linkedIn_icon.svg" alt="LinkedIn icon"></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
