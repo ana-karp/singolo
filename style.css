@@ -143,15 +143,16 @@ header {
     position: absolute;
     opacity: 0;
     transition: .3s;
+    padding: 60px 0;
 }
 
 .screen.left {
-    top: 116px;
+    top: 56px;
     left: 123px;
 }
 
 .screen.right {
-    top: 115px;
+    top: 55px;
     left: 555px;
     transform: rotate(90deg)
 }
