@@ -459,9 +459,14 @@ textarea::placeholder {
     color: #f48c8f;
 }
 
+input:required:invalid:focus {
+    border: solid 1px #f0d8d9;
+}
+
 input::-ms-input-placeholder,
 textarea::-ms-input-placeholder {
     color: #f48c8f;
+    ;
 }
 
 #description {
