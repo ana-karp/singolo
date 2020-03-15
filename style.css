@@ -460,7 +460,6 @@ input:required:invalid:focus {
 input::-ms-input-placeholder,
 textarea::-ms-input-placeholder {
     color: #f48c8f;
-    ;
 }
 
 #description {
@@ -499,6 +498,8 @@ textarea::-ms-input-placeholder {
     font-size: 12px;
     line-height: 22px;
     text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .contacts {
@@ -527,6 +528,8 @@ textarea::-ms-input-placeholder {
 }
 
 #message {
+    max-width: 70%;
+    overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
