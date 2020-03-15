@@ -43,8 +43,8 @@ SUBMIT.addEventListener('click', (e) => {
     if (name.validity.valid && email.validity.valid) {
         e.preventDefault();
         MESSAGE_BLOCK.classList.remove('hidden');
-        document.getElementById('message-subject').innerText = subject.value ? 'Тема: ' + subjectText : 'Без темы';
-        document.getElementById('message-dsc').innerText = description.value ? 'Описание: ' + descriptionText : 'Без описания';
+        document.getElementById('message-subject').innerText = subject.value ? 'Subject: ' + subjectText : 'Without subject';
+        document.getElementById('message-dsc').innerText = description.value ? 'Description: ' + descriptionText : 'Without description';
     }
 
 })
