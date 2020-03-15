@@ -37,11 +37,14 @@ PORTFOLIO.addEventListener('click', () => {
 SUBMIT.addEventListener('click', (e) => {
     const name = document.getElementById('name');
     const email = document.getElementById('email');
+    const subjectText = subject.value.length > 100 ? subject.value.substring(0, 100) + '...' : subject.value;
+    const descriptionText = description.value.length > 100 ? description.value.substring(0, 100) + '...' : description.value;
+
     if (name.validity.valid && email.validity.valid) {
         e.preventDefault();
         MESSAGE_BLOCK.classList.remove('hidden');
-        document.getElementById('message-subject').innerText = subject.value ? 'Тема: ' + subject.value : 'Без темы';
-        document.getElementById('message-dsc').innerText = description.value ? 'Описание: ' + description.value : 'Без описания';
+        document.getElementById('message-subject').innerText = subject.value ? 'Тема: ' + subjectText : 'Без темы';
+        document.getElementById('message-dsc').innerText = description.value ? 'Описание: ' + descriptionText : 'Без описания';
     }
 
 })
