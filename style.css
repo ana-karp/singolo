@@ -491,9 +491,9 @@ textarea::-ms-input-placeholder {
     cursor: pointer;
 }
 
-.submit-button:hover {
+.submit-button:hover,
+.close-button:hover {
     color: #dedede;
-    ;
     border: 1px solid #c5c5c5;
     transition: .3s;
 }
