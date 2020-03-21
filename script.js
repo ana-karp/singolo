@@ -1,20 +1,34 @@
-const MENU = document.getElementById('menu');
+const MENU_LINKS = document.querySelectorAll('#menu a');
+const LEFT_PHONE = document.getElementById('screen-left');
+const RIGHT_PHONE = document.getElementById('screen-right');
 const FILTER = document.getElementById('filter');
 const PORTFOLIO = document.getElementById('portfolio-images');
-const SUBMIT = document.getElementById('submit-button');
+const FORM = document.getElementById('form');
 const MESSAGE_BLOCK = document.getElementById('message-block');
 const CLOSE = document.getElementById('close-button');
-const LEFT_SCREEN = document.getElementById('screen-left');
-const RIGHT_SCREEN = document.getElementById('screen-right');
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+    const position = window.scrollY;
+    const sections = document.querySelectorAll('section');
+    const header = document.querySelector('header');
+
+    sections.forEach(el => {
+        if (el.offsetTop - header.offsetHeight < position && el.offsetTop + el.offsetHeight >= position) {
+            MENU_LINKS.forEach(a => {
+                a.classList.remove('active-menu');
+                if (el.getAttribute('id') === a.innerText.toLowerCase()) {
+                    a.classList.add('active-menu');
+                }
+            })       
+        }
+    })
+}
 
 
-MENU.addEventListener('click', () => {
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('active-menu'));
-    event.target.classList.add('active-menu');
-})
-
-LEFT_SCREEN.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
-RIGHT_SCREEN.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
+LEFT_PHONE.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
+RIGHT_PHONE.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
 
 
 FILTER.addEventListener('click', () => {
@@ -23,7 +37,6 @@ FILTER.addEventListener('click', () => {
         event.target.classList.add('active-filter');
         shiftPortfolio();
     }
-    console.log(PORTFOLIO.firstElementChild);
 })
 
 PORTFOLIO.addEventListener('click', () => {
@@ -34,19 +47,14 @@ PORTFOLIO.addEventListener('click', () => {
     }
 })
 
-SUBMIT.addEventListener('click', (e) => {
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
+FORM.addEventListener('submit', (e) => {
+    e.preventDefault();
     const subjectText = subject.value.length > 100 ? subject.value.substring(0, 100) + '...' : subject.value;
     const descriptionText = description.value.length > 100 ? description.value.substring(0, 100) + '...' : description.value;
 
-    if (name.validity.valid && email.validity.valid) {
-        e.preventDefault();
-        MESSAGE_BLOCK.classList.remove('hidden');
-        document.getElementById('message-subject').innerText = subject.value ? 'Subject: ' + subjectText : 'Without subject';
-        document.getElementById('message-dsc').innerText = description.value ? 'Description: ' + descriptionText : 'Without description';
-    }
-
+    MESSAGE_BLOCK.classList.remove('hidden');
+    document.getElementById('message-subject').innerText = subject.value ? 'Subject: ' + subjectText : 'Without subject';
+    document.getElementById('message-dsc').innerText = description.value ? 'Description: ' + descriptionText : 'Without description';
 })
 
 CLOSE.addEventListener('click', () => {
@@ -74,14 +82,14 @@ function changeCurrentSlide(n) {
 function hideSlide(direction) {
     isEnabled = false;
     slides[currentSlide].classList.add(direction);
-    slides[currentSlide].addEventListener('animationend', function() {
+    slides[currentSlide].addEventListener('animationend', function () {
         this.classList.remove('active', direction);
     });
 }
 
 function showSlide(direction) {
     slides[currentSlide].classList.add('next', direction);
-    slides[currentSlide].addEventListener('animationend', function() {
+    slides[currentSlide].addEventListener('animationend', function () {
         this.classList.remove('next', direction);
         this.classList.add('active');
         isEnabled = true;
@@ -100,13 +108,13 @@ function previousSlide(n) {
     showSlide('from-left');
 }
 
-document.querySelector('.control.next-button').addEventListener('click', function() {
+document.querySelector('.control.next-button').addEventListener('click', function () {
     if (isEnabled) {
         previousSlide(currentSlide);
     }
 });
 
-document.querySelector('.control.prev-button').addEventListener('click', function() {
+document.querySelector('.control.prev-button').addEventListener('click', function () {
     if (isEnabled) {
         nextSlide(currentSlide);
     }

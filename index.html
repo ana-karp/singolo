@@ -16,16 +16,16 @@
         <nav class="navbar">
             <ul id="menu">
                 <li>
-                    <a class="active-menu" href="#">HOME<span>·</span></a>
+                    <a class="active-menu" href="#">HOME</a><span>·</span>
                 </li>
                 <li>
-                    <a href="#services">SERVICES<span>·</span></a>
+                    <a href="#services">SERVICES</a><span>·</span>
                 </li>
                 <li>
-                    <a href="#portfolio">PORTFOLIO<span>·</span></a>
+                    <a href="#portfolio">PORTFOLIO</a><span>·</span>
                 </li>
                 <li>
-                    <a href="#about">ABOUT<span>·</span></a>
+                    <a href="#about">ABOUT</a><span>·</span>
                 </li>
                 <li>
                     <a href="#contact">CONTACT</a>
@@ -34,7 +34,7 @@
         </nav>
     </header>
     <main>
-        <section class="slider">
+        <section id="home" class="slider">
             <div class="slides-container">
                 <div class="slide first active">
                     <img src="assets\images\slide1.png" alt="Slide 1">
@@ -44,12 +44,11 @@
                 <div class="slide">
                     <img src="assets\images\slide2.png" alt="Slide 2">
                 </div>
-            </div>
+            </div>           
             <button class="control prev-button"><img src="assets\images\chev_prev.svg" alt="Previous"></button>
-            <button class="control next-button"><img src="assets\images\chev_next.svg" alt=""></button>
+            <button class="control next-button"><img src="assets\images\chev_next.svg" alt=""></button>             
         </section>
-        <a name="services"></a>
-        <section class="services">
+        <section id="services" class="services">
             <div class="head-services">
                 <h2>Our Services</h2>
                 <p>
@@ -106,9 +105,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <a name="portfolio"></a>
-        <section class="portfolio">
+        </section>        
+        <section id="portfolio" class="portfolio">
             <div class="portfolio-header">
                 <h2>Portfolio</h2>
                 <p>
@@ -136,8 +134,8 @@
                 <div><img src="assets\images\project-12.png" alt="Image of project"></div>
             </div>
         </section>
-        <a name="about"></a>
-        <section class="about-us">
+        
+        <section id="about" class="about-us">
             <div class="about-us-header">
                 <h2>About Us</h2>
                 <p>
@@ -185,9 +183,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <a name="contact"></a>
-        <section class="contact">
+        </section>      
+        <section id="contact" class="contact">
             <div class="contact-header">
                 <h2>Get a Quote</h2>
                 <p>
@@ -200,7 +197,7 @@
                     <input id="email" type="email" name="email" placeholder="Email (Required)" required>
                     <input id="subject" type="text" name="subject" placeholder="Subject">
                     <textarea id="description" type="text" name="description" placeholder="Describe your project in detail..."></textarea>
-                    <button id="submit-button" class="submit-button" type="submit">Submit</button>
+                    <button class="submit-button" type="submit">Submit</button>
                 </form>
 
                 <div class="info">
