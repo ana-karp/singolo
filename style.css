@@ -23,15 +23,22 @@
     padding: 0;
     font-family: "Lato Regular", sans-serif;
     font-weight: normal;
+    scroll-behavior: smooth;
+    scroll-margin-top: 94px;
 }
 
 header,
 main {
     max-width: 1020px;
     margin: auto;
+    
+    
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
     box-sizing: border-box;
     padding: 0 40px;
     height: 95px;
@@ -76,7 +83,7 @@ header {
     color: #f06c64;
 }
 
-.navbar ul li a span {
+.navbar ul li span {
     color: #494e62;
     padding-left: 14px;
 }
@@ -158,6 +165,11 @@ header {
     transform: rotate(90deg)
 }
 
+.screen.left:hover,
+.screen.right:hover {
+    cursor: pointer;
+}
+
 .phone-vertical {
     position: absolute;
     top: 52px;
@@ -202,22 +214,22 @@ header {
 
 @keyframes right {
     from {
-        left: 100%;
+        right: -100%;
     }
     to {
-        left: 0;
+        right: 0%;
     }
 }
 
 .services {
+    position: relative;
     box-sizing: border-box;
-    height: 501px;
-    padding: 59px 40px 0px;
+    padding: 59px 40px 66px;
     color: #666d89;
     background-color: #f2f2f2;
     border-bottom: 6px #ffffff;
 }
-
+ 
 .head-services h2 {
     font-size: 30px;
     font-family: "Lato Black", sans-serif;
