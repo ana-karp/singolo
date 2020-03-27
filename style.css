@@ -662,6 +662,7 @@ footer img:hover {
     height: 100%;
     width: 278px;
     position: fixed;
+    z-index: 5;
     top: 0;
     left: 0;
     padding-left: 20px;
