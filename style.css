@@ -42,13 +42,22 @@ header {
   height: 95px;
   background-color: #2d303a;
   display: flex;
-  justify-content: space-between;
-  overflow: hidden;
   border-bottom: 6px solid #323746;
 }
 
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-icon {
+  display: none;
+}
+
 .logo h1 {
-  padding-top: 30px;
+  line-height: 89px;
+  text-align: center;
   letter-spacing: -0.02em;
   color: #ffffff;
   font-size: 25px;
@@ -91,10 +100,13 @@ header {
 }
 
 .slider {
-  /*height: 600px;*/
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
+}
+
+.slide-image {
+  display: block;
 }
 
 .slides-container {
@@ -128,7 +140,11 @@ header {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 10%;
+  width: 8%;
+}
+
+.control img {
+  width: 30%;
 }
 
 .prev-button,
@@ -149,25 +165,23 @@ header {
   background-color: #0001;
 }
 
-
-.screen { 
+.screen {
   position: absolute;
   opacity: 0;
   transition: 0.3s;
-  
 }
 
 .screen.left {
-  width: calc(194/1020 * 100%);
-  top: calc(114/600 * 100% - 2em);
-  left: calc(123/1020 * 100%);
+  width: calc(194 / 1020 * 100%);
+  top: calc(114 / 600 * 100% - 2em);
+  left: calc(123 / 1020 * 100%);
   padding: 2em 0;
 }
 
 .screen.right {
-  width: calc(339/1020 * 100%);
-  top: calc(187/600 * 100%);
-  left: calc(482/1020 * 100% - 2em);
+  width: calc(339 / 1020 * 100%);
+  top: calc(187 / 600 * 100%);
+  left: calc(482 / 1020 * 100% - 2em);
   padding: 0 2em;
 }
 
@@ -175,7 +189,6 @@ header {
 .screen.right:hover {
   cursor: pointer;
 }
-
 
 /* -----Animation----- */
 
@@ -427,7 +440,7 @@ a {
 
 .contact-form {
   display: grid;
-  grid-template-columns: calc(619/940 * 100%) 1fr;
+  grid-template-columns: calc(619 / 940 * 100%) 1fr;
   column-gap: 20px;
 }
 
@@ -481,7 +494,6 @@ textarea::-ms-input-placeholder {
   border: 1px solid #c5c5c5;
   transition: 0.3s;
 }
-
 
 .info h3,
 #message h3 {
@@ -583,20 +595,113 @@ footer img:hover {
   .head-services p {
     text-align: left;
   }
-  
+
   .container {
     grid-template-columns: 1fr 1fr;
     column-gap: 53px;
     grid-row-gap: 39px;
     padding-right: 34px;
   }
+  
+  .services {
+    padding-top: 40px;
+  }
 
+  .about-us {
+    padding: 52px 40px 75px;
+  }
+
+  .contact {
+    padding: 53px 40px 40px;
+  }
 }
 
 @media (max-width: 767px) {
-  .container, .contact-form, .profiles-container {
+  header {
+    height: 71px;
+    padding: 0 20px;
+    border: none;
+  }
+
+  * {
+    scroll-margin-top: 60px;
+  }
+
+  .logo {
+    display: flex;
+    width: 100%;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+
+  .logo h1 {
+    width: 100%;
+    text-align: center;
+    line-height: 71px;
+  }
+
+  .navbar {
+    display: block;
+    overflow: hidden;
+  }
+
+  .nav-block {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #2d303a;
+    opacity: 0.6;
+  }
+
+  .navbar.nav-active {
+    display: block;
+    height: 100%;
+    width: 278px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    background: #2d303a;
+    box-shadow: 10px 0 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+  }
+
+  #menu-button.active {
+    transform: rotate(90deg);
+  }
+
+  .navbar ul {
+    display: block;
+    margin-top: calc(50vh - 140px);
+  }
+
+  .navbar ul span {
+    display: none;
+  }
+
+  .navbar ul li a {
+    padding: 0 0 27px 71px;
+    font: 24px "Lato Bold";
+  }
+
+  .slider {
+    border: none;
+  }
+
+  .container,
+  .contact-form,
+  .profiles-container {
     display: block;
     padding: 0;
+  }
+
+  .services {
+    padding: 25px 30px 15px;
+    border: none;
   }
 
   .services-item {
@@ -604,8 +709,10 @@ footer img:hover {
   }
 
   .portfolio,
-  .services {
+  .about-us,
+  .contact {
     padding: 42px 30px;
+    border: none;
   }
 
   .projects-container div:nth-child(n + 9) {
@@ -616,6 +723,10 @@ footer img:hover {
     grid-template-columns: 1fr 1fr;
     row-gap: 14px;
     column-gap: 13px;
+  }
+
+  .about-us {
+    padding: 33px 30px 10px;
   }
 
   .profile {
@@ -630,4 +741,18 @@ footer img:hover {
     width: 100%;
   }
 
+  .copyright {
+    display: none;
+  }
+
+  footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 374px) {
+  .filter-item {
+    line-height: 14px;
+    font-size: 9px;
+}
 }
