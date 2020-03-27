@@ -1,4 +1,5 @@
 const MENU_LINKS = document.querySelectorAll('#menu a');
+const MENU_BUTTON = document.getElementById('menu-button');
 const LEFT_PHONE = document.getElementById('screen-left');
 const RIGHT_PHONE = document.getElementById('screen-right');
 const FILTER = document.getElementById('filter');
@@ -25,6 +26,12 @@ function onScroll(event) {
         }
     })
 }
+
+MENU_BUTTON.addEventListener('click', () => {
+    document.querySelector('.navbar').classList.toggle('nav-active');
+    document.getElementById('menu-button').classList.toggle('active');
+    document.querySelector('.nav-block').classList.toggle('hidden');
+});
 
 
 LEFT_PHONE.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
