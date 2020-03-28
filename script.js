@@ -1,5 +1,5 @@
 const MENU_LINKS = document.querySelectorAll('#menu a');
-const MENU_BUTTON = document.getElementById('menu-button');
+const NAVBAR = document.getElementById('navbar');
 const LEFT_PHONE = document.getElementById('screen-left');
 const RIGHT_PHONE = document.getElementById('screen-right');
 const FILTER = document.getElementById('filter');
@@ -27,7 +27,7 @@ function onScroll(event) {
     })
 }
 
-MENU_BUTTON.addEventListener('click', () => {
+NAVBAR.addEventListener('click', () => {
     document.querySelector('.navbar').classList.toggle('nav-active');
     document.getElementById('menu-button').classList.toggle('active');
     document.querySelector('.nav-block').classList.toggle('hidden');
@@ -115,13 +115,13 @@ function previousSlide(n) {
     showSlide('from-left');
 }
 
-document.querySelector('.control.next-button').addEventListener('click', function () {
+document.querySelector('.control.prev-button').addEventListener('click', function () {
     if (isEnabled) {
         previousSlide(currentSlide);
     }
 });
 
-document.querySelector('.control.prev-button').addEventListener('click', function () {
+document.querySelector('.control.next-button').addEventListener('click', function () {
     if (isEnabled) {
         nextSlide(currentSlide);
     }

@@ -108,6 +108,7 @@ header {
 
 .slide-image {
   display: block;
+  width: 100%;
 }
 
 .slides-container {
@@ -122,8 +123,8 @@ header {
   animation: 0.4s ease-in-out;
 }
 
-.slide-image {
-  width: 100%;
+.slide.blue {
+  background-color: #648bf0;
 }
 
 .active,
@@ -146,6 +147,8 @@ header {
 
 .control img {
   width: 20%;
+  filter: brightness(10%);
+  opacity: 0.2;
 }
 
 .prev-button,
@@ -354,6 +357,7 @@ header {
 .active-img {
   outline: solid 5px #f06c64;
   outline-offset: -5px;
+  transition: .2s;
 }
 
 .about-us {
